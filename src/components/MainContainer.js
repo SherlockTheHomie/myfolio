@@ -5,14 +5,17 @@ import Projects from './Pages/Projects';
 import About from './Pages/About';
 import Contact from './Pages/Contact';
 import { ThemeProvider, createTheme } from "@mui/material/styles";
+import Paper from '@mui/material/Paper';
 import CssBaseline from "@mui/material/CssBaseline";
+import Image from "../static/images/background.jpg";
+import { render } from 'react-dom';
 
 const theme = createTheme ({
     palette: {
       type: 'light',
       primary: {
         main: 'rgba(66,163,255,0.89)',
-        contrastText: '#95fbff',
+        contrastText: '#48b0ff',
       },
       secondary: {
         main: '#49eeff',
@@ -34,6 +37,13 @@ const theme = createTheme ({
     },
   });
   
+const styles = {
+    paperContainer: {
+      height: '100vh',
+      width: 'auto',
+      backgroundImage: `url(${Image})`,
+    }
+};
 
 export default function MainContainer() {
     const [currentPage, setCurrentPage] = useState('Home');
@@ -53,17 +63,19 @@ export default function MainContainer() {
     };
   
     const handlePageChange = (page) => setCurrentPage(page);
+    
   
     return (
       <ThemeProvider theme={theme}>
           <CssBaseline/>
-        {/* We are passing the currentPage from state and the function to update it */}
-        <Nav currentPage={currentPage} handlePageChange={handlePageChange} />
-        {/* Here we are calling the renderPage method which will return a component  */}
+        <Paper style={styles.paperContainer}>
+        <Nav currentPage={currentPage} handlePageChange={handlePageChange} />          
         {renderPage()}
+            </Paper>
       </ThemeProvider>
     );
-  }
+
+}
 
 
 

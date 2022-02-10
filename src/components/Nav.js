@@ -8,6 +8,7 @@ import Menu from '@mui/material/Menu';
 import MenuIcon from '@mui/icons-material/Menu';
 import Container from '@mui/material/Container';
 import Avatar from '@mui/material/Avatar';
+import EmojiPeopleIcon from '@mui/icons-material/EmojiPeople';
 import Button from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
@@ -37,7 +38,9 @@ const Nav = ({ currentPage, handlePageChange }) => {
 
   return (
     <>
-    <AppBar position="static">
+    <AppBar position="static" sx={{
+      bgcolor: 'rgba(0,0,0,0)',
+    }}>
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           <Typography
@@ -150,7 +153,14 @@ const Nav = ({ currentPage, handlePageChange }) => {
           <Box sx={{ flexGrow: 0 }}>
             <Tooltip title="Open settings">
               <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-                <Avatar alt="Remy Sharp" src="/static/images/Header.png" />
+                <Avatar sx={{
+                  bgcolor: '#48b0ff',
+                }}>
+                <EmojiPeopleIcon sx={{
+                  color: '#000000',
+                  fontSize: 'large',
+                }}/>
+                </Avatar>
               </IconButton>
             </Tooltip>
             <Menu
@@ -170,7 +180,9 @@ const Nav = ({ currentPage, handlePageChange }) => {
               onClose={handleCloseUserMenu}
             >
               {settings.map((setting) => (
-                <MenuItem key={setting} onClick={handleCloseUserMenu}>
+                <MenuItem key={setting} onClick={handleCloseUserMenu} sx={{
+                  bgcolor: '#14ffaf',
+                }}>
                   <Typography textAlign="center">{setting}</Typography>
                 </MenuItem>
               ))}
