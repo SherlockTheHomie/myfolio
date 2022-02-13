@@ -23,7 +23,7 @@ const theme = createTheme ({
         dark: '#000000',
       },
       background: {
-        paper: 'rgba(116,229,255,0.64)',
+        paper: '#48b0ff',
         default: '#000000',
       },
       error: {
@@ -35,6 +35,9 @@ const theme = createTheme ({
         secondary: '#f7f5f5',
       },
     },
+    typography: {
+      fontFamily: 'monospace',
+    }
   });
   
 const styles = {
@@ -44,6 +47,8 @@ const styles = {
       backgroundImage: `url(${Image})`,
     }
 };
+
+
 
 export default function MainContainer() {
     const [currentPage, setCurrentPage] = useState('Home');
@@ -69,7 +74,8 @@ export default function MainContainer() {
       <ThemeProvider theme={theme}>
           <CssBaseline/>
         <Paper style={styles.paperContainer}>
-        <Nav currentPage={currentPage} handlePageChange={handlePageChange} />          
+        <Nav currentPage={currentPage} handlePageChange={handlePageChange} />
+                 
         {renderPage()}
             </Paper>
       </ThemeProvider>

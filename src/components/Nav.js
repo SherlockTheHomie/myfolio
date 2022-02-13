@@ -4,6 +4,7 @@ import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
 import IconButton from '@mui/material/IconButton';
 import Typography from '@mui/material/Typography';
+import Link from '@mui/material/Link';
 import Menu from '@mui/material/Menu';
 import MenuIcon from '@mui/icons-material/Menu';
 import Container from '@mui/material/Container';
@@ -14,7 +15,13 @@ import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 
 
-const settings = ['My Github', 'My LinkedIn', 'My Spotify'];
+const settings = ([
+  
+  <Link href="https://github.com/SherlockTheHomie" sx={{ color: '#000000' }}>Github</Link>,
+  <Link href="https://www.linkedin.com/in/gabe-l-herault-689b0a139/" sx={{ color: '#000000'}}>LinkedIn</Link>,
+  <Link href="https://open.spotify.com/artist/4t8ZjpSfEjYCE8RakAo8wN?autoplay=true" sx={{ color: '#000000'}}>Spotify</Link>
+])
+ 
 
 const Nav = ({ currentPage, handlePageChange }) => {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
@@ -151,6 +158,11 @@ const Nav = ({ currentPage, handlePageChange }) => {
           </Box>
 
           <Box sx={{ flexGrow: 0 }}>
+            <Typography sx={{
+              textAlign: 'center',
+              float: 'left',
+              padding: 1,
+            }}>Check out my</Typography>
             <Tooltip title="Open settings">
               <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
                 <Avatar sx={{
@@ -180,10 +192,10 @@ const Nav = ({ currentPage, handlePageChange }) => {
               onClose={handleCloseUserMenu}
             >
               {settings.map((setting) => (
-                <MenuItem key={setting} onClick={handleCloseUserMenu} sx={{
-                  bgcolor: '#14ffaf',
+                <MenuItem key={setting} onClick={handleCloseUserMenu} sx={{ bgcolor: '#48b0ff',
                 }}>
-                  <Typography textAlign="center">{setting}</Typography>
+                  {setting}
+                  
                 </MenuItem>
               ))}
             </Menu>
