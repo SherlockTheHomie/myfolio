@@ -90,22 +90,22 @@ const Nav = ({ currentPage, handlePageChange }) => {
             >
               
                 <MenuItem key={'Home'} 
-                onClick={() => handlePageChange('Home')}
+                onClick={() => {handlePageChange('Home'); handleCloseNavMenu();}}
                 className={currentPage === 'Home' ? 'nav-link active' : 'nav-link'}>
                   <Typography textAlign="center">Home</Typography>
                 </MenuItem>
                 <MenuItem key={'Projects'} 
-                onClick={() => handlePageChange('Projects')}
+                onClick={() => {handlePageChange('Projects'); handleCloseNavMenu();}}
                 className={currentPage === 'Projects' ? 'nav-link active' : 'nav-link'}>
                   <Typography textAlign="center">Projects</Typography>
                 </MenuItem>
                 <MenuItem key={'About'} 
-                onClick={() => handlePageChange('About')}
+                onClick={() => {handlePageChange('About'); handleCloseNavMenu();}}
                 className={currentPage === 'About' ? 'nav-link active' : 'nav-link'}>
                   <Typography textAlign="center">About</Typography>
                 </MenuItem>
                 <MenuItem key={'Contact'} 
-                onClick={() => handlePageChange('Contact')}
+                onClick={() => {handlePageChange('Contact'); handleCloseNavMenu();}}
                 className={currentPage === 'Contact' ? 'nav-link active' : 'nav-link'}>
                   <Typography textAlign="center">Contact</Typography>
                 </MenuItem>
@@ -125,7 +125,7 @@ const Nav = ({ currentPage, handlePageChange }) => {
            
               <Button
                 key={'Home'}
-                onClick={() => handlePageChange('Home')}
+                onClick={() => {handlePageChange('Home'); handleCloseNavMenu();}}
                 sx={{ my: 2, color: 'white', display: 'block' }}
                 className={currentPage === 'Home' ? 'nav-link active' : 'nav-link'}
               >
@@ -133,7 +133,7 @@ const Nav = ({ currentPage, handlePageChange }) => {
               </Button>
               <Button
               key={'Projects'}
-              onClick={() => handlePageChange('Projects')}
+              onClick={() => {handlePageChange('Projects'); handleCloseNavMenu();}}
               sx={{ my: 2, color: 'white', display: 'block' }}
               className={currentPage === 'Projects' ? 'nav-link active' : 'nav-link'}
             >
@@ -141,7 +141,7 @@ const Nav = ({ currentPage, handlePageChange }) => {
             </Button>
             <Button
             key={'About'}
-            onClick={() => handlePageChange('About')}
+            onClick={() => {handlePageChange('About'); handleCloseNavMenu();}}
             sx={{ my: 2, color: 'white', display: 'block' }}
             className={currentPage === 'About' ? 'nav-link active' : 'nav-link'}
           >
@@ -149,7 +149,7 @@ const Nav = ({ currentPage, handlePageChange }) => {
           </Button>
           <Button
           key={'Contact'}
-          onClick={() => handlePageChange('Contact')}
+          onClick={() => {handlePageChange('Contact'); handleCloseNavMenu();}}
           sx={{ my: 2, color: 'white', display: 'block' }}
           className={currentPage === 'Contact' ? 'nav-link active' : 'nav-link'}
         >
@@ -162,6 +162,7 @@ const Nav = ({ currentPage, handlePageChange }) => {
               textAlign: 'center',
               float: 'left',
               padding: 1,
+              display: { xs: 'none', md: 'flex' }
             }}>Check out my</Typography>
             <Tooltip title="Open settings">
               <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
