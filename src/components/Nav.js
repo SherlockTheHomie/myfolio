@@ -16,7 +16,6 @@ import MenuItem from '@mui/material/MenuItem';
 
 
 const settings = ([
-  
   <Link href="https://github.com/SherlockTheHomie" sx={{ color: '#000000' }}>Github</Link>,
   <Link href="https://www.linkedin.com/in/gabe-l-herault-689b0a139/" sx={{ color: '#000000'}}>LinkedIn</Link>,
   <Link href="https://open.spotify.com/artist/4t8ZjpSfEjYCE8RakAo8wN?autoplay=true" sx={{ color: '#000000'}}>Spotify</Link>
@@ -88,7 +87,6 @@ const Nav = ({ currentPage, handlePageChange }) => {
                 display: { xs: 'block', md: 'none' },
               }}
             >
-              
                 <MenuItem key={'Home'} 
                 onClick={() => {handlePageChange('Home'); handleCloseNavMenu();}}
                 className={currentPage === 'Home' ? 'nav-link active' : 'nav-link'}>
@@ -109,8 +107,6 @@ const Nav = ({ currentPage, handlePageChange }) => {
                 className={currentPage === 'Contact' ? 'nav-link active' : 'nav-link'}>
                   <Typography textAlign="center">Contact</Typography>
                 </MenuItem>
-                
-              
             </Menu>
           </Box>
           <Typography
@@ -162,12 +158,12 @@ const Nav = ({ currentPage, handlePageChange }) => {
               textAlign: 'center',
               float: 'left',
               padding: 1,
-              display: { xs: 'none', md: 'flex' }
+              display: { xs: 'none', md: 'block' }
             }}>Check out my</Typography>
             <Tooltip title="Open settings">
-              <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
+              <IconButton onClick={handleOpenUserMenu} disableScrollLock={true} sx={{ p: 0 }}>
                 <Avatar sx={{
-                  bgcolor: '#48b0ff',
+                  bgcolor: '#00FFFF',
                 }}>
                 <EmojiPeopleIcon sx={{
                   color: '#000000',
