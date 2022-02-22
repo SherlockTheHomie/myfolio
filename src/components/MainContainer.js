@@ -73,7 +73,11 @@ export default function MainContainer() {
       if (currentPage === 'About') {
         return <About />;
       }
-      return <Contact />;
+      if (currentPage === 'Contact') {
+        return <Contact />;
+      } else{
+      return <Home />;
+      }
     };
   
     const handlePageChange = (page) => setCurrentPage(page);
@@ -82,11 +86,12 @@ export default function MainContainer() {
     return (
       <ThemeProvider theme={theme}>
           <CssBaseline/>
-        <Paper style={styles.paperContainer}>
-        <Nav currentPage={currentPage} handlePageChange={handlePageChange} />
+        <Nav sx={{
+          position:'sticky',
+        }} currentPage={currentPage} handlePageChange={handlePageChange}/>
                  
         {renderPage()}
-            </Paper>
+            {/* </Paper> */}
       </ThemeProvider>
     );
 

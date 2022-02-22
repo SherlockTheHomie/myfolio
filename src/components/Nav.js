@@ -53,9 +53,10 @@ const Nav = ({ currentPage, handlePageChange }) => {
             variant="h6"
             noWrap
             component="div"
-            sx={{ mr: 2, display: { xs: 'none', md: 'flex' } }}
+            sx={{ mr: 2, display: { xs: 'none', md: 'flex' },
+            color: '#346eff' }}
           >
-            Gabe L'Herault
+            GABE L'HERAULT
           </Typography>
 
           <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
@@ -67,7 +68,9 @@ const Nav = ({ currentPage, handlePageChange }) => {
               onClick={handleOpenNavMenu}
               color="inherit"
             >
-              <MenuIcon />
+              <MenuIcon sx={{
+                color: '#00FFFF',
+              }}/>
             </IconButton>
             <Menu
               id="menu-appbar"
@@ -113,9 +116,10 @@ const Nav = ({ currentPage, handlePageChange }) => {
             variant="h6"
             noWrap
             component="div"
-            sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}
+            sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' },
+          color: '#346eff', }}
           >
-            Gabe L'Herault
+            GABE L'HERAULT
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
            
@@ -161,7 +165,7 @@ const Nav = ({ currentPage, handlePageChange }) => {
               display: { xs: 'none', md: 'block' }
             }}>Check out my</Typography>
             <Tooltip title="Open settings">
-              <IconButton onClick={handleOpenUserMenu} disableScrollLock={true} sx={{ p: 0 }}>
+              <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
                 <Avatar sx={{
                   bgcolor: '#00FFFF',
                 }}>

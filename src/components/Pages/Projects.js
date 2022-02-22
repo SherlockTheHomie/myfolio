@@ -18,6 +18,8 @@ import passPic from '../../static/images/passGen.jpg';
 import herfQuiz from '../../static/images/herfQuiz.jpg';
 import docHub from '../../static/images/docHub.jpg';
 
+
+
 // color: '#14ffaf',
 const proDescriptionA = (
   <Box>
@@ -59,19 +61,19 @@ const proDescriptionC = (
     <Typography sx={{
       color: '#e4f2ff',
       fontSize: { xs: 12, md: 18, },
-    }}>Password Generator is a simple app written in javascript used to create customized safe passwords from parameters chosen by the user.
+    }}>A React application using MUI, currently a work in progress that will allow users to view, rate and revise technical documentation.
     </Typography>
   </Box>
 );
 
 export default function Projects() {
 
+
   const [checked, setChecked] = React.useState(false);
   const [franked, setFranked] = React.useState(false);
   const [tom, setTom] = React.useState(false);
 
   const [display, setDisplay] = React.useState('none');
-
   const [herfdisplay, setHerf] = React.useState('none');
   const [docdisplay, setDoc] = React.useState('none');
 
@@ -128,71 +130,6 @@ export default function Projects() {
         padding: { xs: 0, md: 4 },
         mixWidth: 375,
       }}>
-        <Grid item xs={12} md={4}>
-          <Grow in={true} style={{ transformOrigin: '0 0 0' }}{...(true ? { timeout: 1000 } : {})}>
-            <Card sx={{
-              maxWidth: { xs: 400, md: 500 },
-              bgcolor: 'rgba(82,168,251,0.00)',
-              display: 'flex'
-            }}>
-              <CardMedia component="img"
-                alt="green iguana"
-                image={passPic} sx={{
-                  display: { xs: 'flex', md: 'flex' },
-                  maxWidth: { xs: 125, md: 150, lg: 200 },
-                  maxHeight: { xs: 125, md: 150, lg: 200 },
-                }}>
-              </CardMedia>
-              <CardContent sx={{
-                display: 'flex',
-                flexDirection: 'column',
-              }}>
-                <Typography gutterBottom variant="h5" component="div" sx={{
-                  fontSize: { xs: 18, md: 32, },
-                  color: '#14ffaf',
-                }}>
-                  Password Generator
-                </Typography>
-                <Typography gutterBottom variant="p" component="div" sx={{
-                  fontSize: { xs: 12, md: 18, },
-                  color: '#48b0ff',
-                }}>
-                  Generate custom secure passwords
-                </Typography>
-                <CardActions>
-                  <Button size="small" variant="outlined" href="https://github.com/SherlockTheHomie/Password-Gen" sx={{ color: '#e3ef30', marginRight: 1, }}>
-                    Visit Repo
-                  </Button>
-                  <Button size="small" variant="outlined" onClick={passwordDisplayChange} sx={{ color: '#e3ef30' }}>
-                    More
-                  </Button>
-                </CardActions>
-
-              </CardContent>
-            </Card>
-          </Grow>
-          <Card sx={{
-            maxWidth: { xs: 400, md: 500 },
-            bgcolor: 'rgba(82,168,251,0.00)',
-            display: display,
-            flexDirection: 'row',
-            padding: 1,
-          }}>
-            <Grow in={checked} duration="1000" style={{ transformOrigin: '0 0 0' }}{...(checked ? { timeout: 2000 } : {})}>
-              <Button href="https://sherlockthehomie.github.io/Password-Gen/" size="small" variant="outlined" sx={{
-                margin: 1,
-                height: 50,
-                color: '#38ef30',
-                borderColor: '#38ef30',
-              }}>Open</Button>
-            </Grow>
-            <Grow in={checked} sx={{ fontSize: 12 }} style={{ transformOrigin: '0 0 0' }}{...(checked ? { timeout: 2500 } : {})}>
-              {proDescriptionA}
-            </Grow>
-          </Card>
-        </Grid>
-
-
         <Grid item xs={12} md={4}>
           <Grow in={true} style={{ transformOrigin: '0 0 0' }}{...(true ? { timeout: 1000 } : {})}>
             <Card sx={{
@@ -259,7 +196,7 @@ export default function Projects() {
 
 
         <Grid item xs={12} md={4}>
-          <Grow in={true} style={{ transformOrigin: '0 0 0' }}{...(true ? { timeout: 1000 } : {})}>
+          <Grow in={true} style={{ transformOrigin: '0 0 0' }}{...(true ? { timeout: 2000 } : {})}>
             <Card sx={{
               maxWidth: { xs: 400, md: 500 },
               bgcolor: 'rgba(82,168,251,0.00)',
@@ -321,6 +258,70 @@ export default function Projects() {
             </Grow>
           </Card>
         </Grid>
+        <Grid item xs={12} md={4}>
+          <Grow in={true} style={{ transformOrigin: '0 0 0' }}{...(true ? { timeout:3000 } : {})}>
+            <Card sx={{
+              maxWidth: { xs: 400, md: 500 },
+              bgcolor: 'rgba(82,168,251,0.00)',
+              display: 'flex'
+            }}>
+              <CardMedia component="img"
+                alt="green iguana"
+                image={passPic} sx={{
+                  display: { xs: 'flex', md: 'flex' },
+                  maxWidth: { xs: 125, md: 150, lg: 200 },
+                  maxHeight: { xs: 125, md: 150, lg: 200 },
+                }}>
+              </CardMedia>
+              <CardContent sx={{
+                display: 'flex',
+                flexDirection: 'column',
+              }}>
+                <Typography gutterBottom variant="h5" component="div" sx={{
+                  fontSize: { xs: 18, md: 32, },
+                  color: '#14ffaf',
+                }}>
+                  Password Generator
+                </Typography>
+                <Typography gutterBottom variant="p" component="div" sx={{
+                  fontSize: { xs: 12, md: 18, },
+                  color: '#48b0ff',
+                }}>
+                  Generate custom secure passwords
+                </Typography>
+                <CardActions>
+                  <Button size="small" variant="outlined" href="https://github.com/SherlockTheHomie/Password-Gen" sx={{ color: '#e3ef30', marginRight: 1, }}>
+                    Visit Repo
+                  </Button>
+                  <Button size="small" variant="outlined" onClick={passwordDisplayChange} sx={{ color: '#e3ef30' }}>
+                    More
+                  </Button>
+                </CardActions>
+
+              </CardContent>
+            </Card>
+          </Grow>
+          <Card sx={{
+            maxWidth: { xs: 400, md: 500 },
+            bgcolor: 'rgba(82,168,251,0.00)',
+            display: display,
+            flexDirection: 'row',
+            padding: 1,
+          }}>
+            <Grow in={checked} duration="1000" style={{ transformOrigin: '0 0 0' }}{...(checked ? { timeout: 2000 } : {})}>
+              <Button href="https://sherlockthehomie.github.io/Password-Gen/" size="small" variant="outlined" sx={{
+                margin: 1,
+                height: 50,
+                color: '#38ef30',
+                borderColor: '#38ef30',
+              }}>Open</Button>
+            </Grow>
+            <Grow in={checked} sx={{ fontSize: 12 }} style={{ transformOrigin: '0 0 0' }}{...(checked ? { timeout: 2500 } : {})}>
+              {proDescriptionA}
+            </Grow>
+          </Card>
+        </Grid>
+{/* new projects here */}
       </Grid>
     </Box>
   );
