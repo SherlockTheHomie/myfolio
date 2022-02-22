@@ -4,6 +4,7 @@ import Slide from '@mui/material/Slide';
 import Link from '@mui/material/Link';
 import Card from '@mui/material/Card';
 import Button from '@mui/material/Button';
+import doc from '../../static/documents/'
 import ArrowCircleDownIcon from '@mui/icons-material/ArrowCircleDown';
 
 export default function Contact() {
@@ -44,7 +45,7 @@ export default function Contact() {
         </Slide>
 
         <Slide direction="right" in={checked} mountOnEnter unmountOnExit>
-        <Button variant="outlined" sx={{marginTop: 2}}><ArrowCircleDownIcon/>Download My Resume</Button>
+        <Button variant="outlined" sx={{marginTop: 2}}><ArrowCircleDownIcon/><Link href="../../static/documents/Gabe L'Herault - FS Resume 2022.docx">Email</Link></Button>
         </Slide>
 
         <Slide direction="left" in={checked} mountOnEnter unmountOnExit>
