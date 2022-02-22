@@ -1,18 +1,17 @@
 {
   "files": {
-    "main.css": "/myfolio/static/css/main.e6c13ad2.css",
-    "main.js": "/myfolio/static/js/main.4c06fedd.js",
+    "main.js": "/myfolio/static/js/main.d8d31ba5.js",
     "static/media/background.jpg": "/myfolio/static/media/background.6802d3b9a9427896ca8c.jpg",
-    "static/media/herfQuiz.png": "/myfolio/static/media/herfQuiz.299581649717abf350f9.png",
-    "static/media/passGen.png": "/myfolio/static/media/passGen.2bdd43a67f0f5e51e88c.png",
     "static/media/Me.jpg": "/myfolio/static/media/Me.c0fb7b3df71521849c41.jpg",
-    "static/media/docHub.png": "/myfolio/static/media/docHub.afe1cfd197af571482d5.png",
+    "static/media/mebnw.jpg": "/myfolio/static/media/mebnw.a5f15f932557b6857386.jpg",
+    "static/media/SMUbadge.png": "/myfolio/static/media/SMUbadge.31fc312a003114474c0f.png",
+    "static/media/herfQuiz.jpg": "/myfolio/static/media/herfQuiz.6d4e688084310f332493.jpg",
+    "static/media/passGen.jpg": "/myfolio/static/media/passGen.482d6f8507b9ae9c1ecd.jpg",
+    "static/media/docHub.jpg": "/myfolio/static/media/docHub.6829ed52bd9818ffd105.jpg",
     "index.html": "/myfolio/index.html",
-    "main.e6c13ad2.css.map": "/myfolio/static/css/main.e6c13ad2.css.map",
-    "main.4c06fedd.js.map": "/myfolio/static/js/main.4c06fedd.js.map"
+    "main.d8d31ba5.js.map": "/myfolio/static/js/main.d8d31ba5.js.map"
   },
   "entrypoints": [
-    "static/css/main.e6c13ad2.css",
-    "static/js/main.4c06fedd.js"
+    "static/js/main.d8d31ba5.js"
   ]
 }
