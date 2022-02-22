@@ -1,17 +1,10 @@
 import React, { bounds, useState } from 'react';
 import Box from '@mui/material/Box';
 import Slide from '@mui/material/Slide';
-import { useSpring, animated } from '@react-spring/web';
 import Link from '@mui/material/Link';
 import Card from '@mui/material/Card';
-import Grow from '@mui/material/Grow';
 import Button from '@mui/material/Button';
 import ArrowCircleDownIcon from '@mui/icons-material/ArrowCircleDown';
-import { useDrag, Bounds } from '@use-gesture/react';
-import AutoAwesomeMosaicIcon from '@mui/icons-material/AutoAwesomeMosaic';
-
-
-
 
 export default function Contact() {
 
