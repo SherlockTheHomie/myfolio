@@ -46,7 +46,7 @@ export default function About() {
             textAlign: 'left',
             color: '#00FFFF',
           }}>
-          Who is...me?
+          Who is me?
           </Typography>
       </Grow>
       </Grid>
@@ -70,7 +70,7 @@ export default function About() {
             fontSize: '1.0rem',
             color: '#e4f2ff',
           }}>
-            Born in Madison, Wisconsin. I spent my youth shoveling sidewalks, making music and learning how to edit pc games. In Highschool, I played stand up bass in the orchestra and learned a little C+ but still spent most of my time making music. After I graduated from Verona Area High School, I spent a couple of years working with local Hip Hop artists and found myself looking for a change of scenery. After moving to Minnesota and attending IPR, I found it. The vibrant Hip-Hop scene was welcoming and competitive. It was exactly what I needed. I started writing songs, singing, rapping and producing beats under the name "The Cardboard Man". I collaborated with some very talented people, engineered a few side projects and spent the next 7-8 years letting out a lot of creative energy which led to the release of 4 albums. As soon as my 30s were on the horizon, I started to sense I needed to change some things. I needed to find a stable career. 
+            Born in Madison, Wisconsin. I spent my youth shoveling sidewalks, making music and learning how to edit pc games. In Highschool, I played stand up bass in the orchestra and learned a little C+ but still spent most of my time making music. After High School, I attended a Recording and Production school in Minneapolis and spent the next ten years as a singer, songwriter, rapper, producer and recording engineer while doing some graphic design and video editing in my spare time. After 4 albums and a lot of shows and a rollercoaster of income, while my 30s were on the horizon, I started to sense I needed to find a stable career. After moving down to Plano, Texas, I got into social media marketing, sharpened my content creation skills and collaborated on a few projects with a good friend of mine who taught me a lot about tech start ups and agile development. After focusing more on UI and UX design, I started to crave the code. So I attended a Full Stack Web Development bootcamp through SMU... and here we are.
           </Typography>
         </Paper>
         
