@@ -19,6 +19,7 @@ import herfQuiz from '../../static/images/herfQuiz.jpg';
 import docHub from '../../static/images/docHub.jpg';
 import dateNite from '../../static/images/datenite.jpg';
 import weChill from '../../static/images/weChill.jpg';
+import readYou from '../../static/images/readyou.jpg';
 
 
 
@@ -98,6 +99,21 @@ const proDescriptionE = (
   </Box>
 );
 
+const proDescriptionF = (
+  <Box>
+    <Typography sx={{
+      color: '#48b0ff',
+      fontSize: '.80rem',
+    }}>Authors: Gabe L'Herault
+    </Typography>
+    <Typography sx={{
+      color: '#e4f2ff',
+      fontSize: '.70rem',
+    }}>READYou - The Readme Generator is a command line prompt, that asks the users a series of questions about their application and then generates a readme based on their response.
+    </Typography>
+  </Box>
+);
+
 export default function Projects() {
 
 
@@ -106,12 +122,14 @@ export default function Projects() {
   const [tom, setTom] = React.useState(false);
   const [date, setDate] = React.useState(false);
   const [chill, setChill] = React.useState(false);
+  const [read, setRead] = React.useState(false);
 
   const [display, setDisplay] = React.useState('none');
   const [herfdisplay, setHerf] = React.useState('none');
   const [docdisplay, setDoc] = React.useState('none');
   const [dateDisplay, setDateDisplay] = React.useState('none');
   const [chillDisplay, setChillDisplay] = React.useState('none');
+  const [readDisplay, setReadDisplay] = React.useState('none');
 
 
 
@@ -165,6 +183,17 @@ export default function Projects() {
     }
   };
 
+  const readDisplayChange = () => {
+    if (readDisplay === 'none') {
+      setReadDisplay('flex');
+      showSix();
+    } if (readDisplay === 'flex') {
+      showSix();
+      setReadDisplay('none');
+    }
+  };
+
+
   const showOne = () => {
     setChecked((prev) => !prev);
   };
@@ -183,6 +212,10 @@ export default function Projects() {
 
   const showFive = () => {
     setChill((prev) => !prev);
+  };
+
+  const showSix = () => {
+    setRead((prev) => !prev);
   };
 
   return (
@@ -507,6 +540,69 @@ export default function Projects() {
             </Grow>
             <Grow in={chill} sx={{ fontSize: 12 }} style={{ transformOrigin: '0 0 0' }}{...(chill ? { timeout: 2500 } : {})}>
               {proDescriptionE}
+            </Grow>
+          </Card>
+        </Grid>
+        <Grid item xs={12} md={4}>
+          <Grow in={true} style={{ transformOrigin: '0 0 0' }}{...(true ? { timeout:5000 } : {})}>
+            <Card sx={{
+              maxWidth: { xs: 400, md: 500 },
+              bgcolor: 'rgba(82,168,251,0.00)',
+              display: 'flex'
+            }}>
+              <CardMedia component="img"
+                alt="read you splash"
+                image={readYou} sx={{
+                  display: { xs: 'flex', md: 'flex' },
+                  maxWidth: { xs: 100, md: 125, lg: 150 },
+                  maxHeight: { xs: 100, md: 125, lg: 150 },
+                }}>
+              </CardMedia>
+              <CardContent sx={{
+                display: 'flex',
+                flexDirection: 'column',
+              }}>
+                <Typography gutterBottom variant="h5" component="div" sx={{
+                  fontSize: { xs: '1.10rem', md: '1.50rem', lg: '1.75rem' },
+                  color: '#14ffaf',
+                }}>
+                  READYou
+                </Typography>
+                <Typography gutterBottom variant="p" component="div" sx={{
+                  fontSize: { xs: '.75rem', md: '1.00rem', lg: '1.00rem' },
+                  color: '#48b0ff',
+                }}>
+                  Readme? More like... easy
+                </Typography>
+                <CardActions>
+                  <Button size="small" variant="outlined" href="https://github.com/SherlockTheHomie/READYOU" sx={{ color: '#e3ef30', marginRight: 1, }}>
+                    Visit Repo
+                  </Button>
+                  <Button size="small" variant="outlined" onClick={readDisplayChange} sx={{ color: '#e3ef30' }}>
+                    More
+                  </Button>
+                </CardActions>
+
+              </CardContent>
+            </Card>
+          </Grow>
+          <Card sx={{
+            maxWidth: { xs: 400, md: 500 },
+            bgcolor: 'rgba(82,168,251,0.00)',
+            display: readDisplay,
+            flexDirection: 'row',
+            padding: 1,
+          }}>
+            <Grow in={read} duration="1000" style={{ transformOrigin: '0 0 0' }}{...(read ? { timeout: 2000 } : {})}>
+              <Button href="https://github.com/SherlockTheHomie/Hoods" size="small" variant="outlined" sx={{
+                margin: 1,
+                height: 50,
+                color: '#38ef30',
+                borderColor: '#38ef30',
+              }}>Open</Button>
+            </Grow>
+            <Grow in={read} sx={{ fontSize: 12 }} style={{ transformOrigin: '0 0 0' }}{...(read ? { timeout: 2500 } : {})}>
+              {proDescriptionF}
             </Grow>
           </Card>
         </Grid>
